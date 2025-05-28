@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>pom-scijava-base</artifactId>
+    <groupId>org.scijava</groupId>
+    <version>20.0.0</version>
+    <relativePath>../pom.xml/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.uga</groupId>
+  <artifactId>LengthAnalysisToolSlowCells_1</artifactId>
+  <name>LengthAnalysisToolSlowCells_1</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>A tool to measure lengths of cells</description>
+  <url>https://uga.com/imagej/LengthAnalysisTool/</url>
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/imagej/example-legacy-plugin/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>None</system>
+  </ciManagement>
+  <inceptionYear>2022</inceptionYear>
+  <mailingLists>
+    <mailingList>
+      <name>Image.sc Forum</name>
+      <archive>https://forum.image.sc/tag/imagej</archive>
+    </mailingList>
+  </mailingLists>
+  <developers>
+    <developer>
+      <id>avi</id>
+      <name>Varshini Bonagiri</name>
+      <url>https://computing.uga.edu/directory/people/varshini-bonagiri</url>
+      <roles>
+        <role>founder</role>
+        <role>lead</role>
+        <role>developer</role>
+        <role>debugger</role>
+        <role>reviewer</role>
+        <role>support</role>
+        <role>maintainer</role>
+      </roles>
+    </developer>
+  </developers>
+  <contributors>
+    <contributor>
+      <name>None</name>
+    </contributor>
+  </contributors>
+  <licenses>
+    <license>
+      <name>CC0</name>
+      <url>https://creativecommons.org/publicdomain/zero/1.0/</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:https://github.com/imagej/example-legacy-plugin</connection>
+    <developerConnection>scm:git:git@github.com:imagej/example-legacy-plugin</developerConnection>
+    <url>https://github.com/imagej/example-legacy-plugin</url>
+  </scm>
+  <organization>
+    <name>University of Georgia</name>
+    <url>https://uga.edu/</url>
+  </organization>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.uga.imagej.LengthAnalysisTool_2</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>11</source>
+          <target>11</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <repositories>
+    <repository>
+      <snapshots />
+      <id>scijava.public</id>
+      <url>https://maven.scijava.org/content/groups/public</url>
+    </repository>
+  </repositories>
+  <properties>
+    <license.copyrightOwners>University of Georgia</license.copyrightOwners>
+    <license.licenseName>cc0</license.licenseName>
+    <package-name>com.uga.imagej</package-name>
+    <main-class>com.uga.imagej.Process_Pixels</main-class>
+  </properties>
+</project>

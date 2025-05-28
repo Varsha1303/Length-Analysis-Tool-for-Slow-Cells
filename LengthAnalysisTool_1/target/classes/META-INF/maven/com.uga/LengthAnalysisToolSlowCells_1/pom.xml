@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava-base</artifactId>
+		<version>20.0.0</version>
+  </parent>
+  <groupId>com.uga</groupId>
+  <artifactId>LengthAnalysisToolSlowCells_1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>LengthAnalysisToolSlowCells_1</name>
+  	<description>A tool to measure lengths of cells</description> <!-- FIXME: Your project description here   -->
+	<url>https://uga.com/imagej/LengthAnalysisToolSlowCells/</url>                       <!-- FIXME: Your project website here       -->
+	<inceptionYear>2022</inceptionYear>                                           <!-- FIXME: Your project starting year here -->
+	<organization>
+		<name>University of Georgia</name>           <!-- FIXME: Your organization name here    -->
+		<url>https://uga.edu/</url> <!-- FIXME: Your organization website here -->
+	</organization>
+	<licenses>
+		<license>                         <!-- FIXME: Your license here -->
+			<name>CC0</name>
+			<url>https://creativecommons.org/publicdomain/zero/1.0/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<!-- See https://imagej.net/contribute/governance#scijava-team-roles -->
+		<developer>
+			<id>avi</id>                                          <!-- FIXME: Your GitHub handle here -->
+			<name>Varshini Bonagiri</name>                            <!-- FIXME: Your name here          -->
+			<url>https://computing.uga.edu/directory/people/varshini-bonagiri</url> <!-- FIXME: Your website here       -->
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tag/imagej</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:https://github.com/imagej/example-legacy-plugin</connection>
+		<developerConnection>scm:git:git@github.com:imagej/example-legacy-plugin</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/imagej/example-legacy-plugin</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/imagej/example-legacy-plugin/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+  <repositories>
+    <repository>
+        <id>scijava.public</id>
+        <url>https://maven.scijava.org/content/groups/public</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+	</repositories>
+  <properties>
+		<package-name>com.uga.imagej</package-name>                   <!-- FIXME: Your project package prefix here -->
+		<main-class>com.uga.imagej.Process_Pixels</main-class>        <!-- FIXME: Your project main class here, or delete for none -->
+		<license.licenseName>cc0</license.licenseName>                      <!-- FIXME: Your license-maven-plugin license code here -->
+		<license.copyrightOwners>University of Georgia</license.copyrightOwners> <!-- FIXME: Your organization legal entity name here -->
+	</properties>
+  <dependencies>
+    <dependency>
+        <groupId>net.imagej</groupId>
+        <artifactId>ij</artifactId>
+        <version>1.54p</version> <!-- Use the latest version -->
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<!-- https://mvnrepository.com/artifact/org.scijava/scijava-common -->
+		<!-- JavaCV dependencies -->
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv-platform</artifactId>
+			<version>1.4.2</version>
+		</dependency>
+			<dependency>
+	    <groupId>sc.fiji</groupId>
+	    <artifactId>fiji-lib</artifactId>
+	    <version>fiji-lib-2.1.3</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/sc.fiji/Auto_Threshold -->
+	<dependency>
+	    <groupId>sc.fiji</groupId>
+	    <artifactId>Auto_Threshold</artifactId>
+	    <version>1.17.2</version>
+	</dependency>	
+	<!-- https://mvnrepository.com/artifact/fr.inra.ijpb/MorphoLibJ_ -->
+	<dependency>
+	    <groupId>fr.inra.ijpb</groupId>
+	    <artifactId>MorphoLibJ_</artifactId>
+	    <version>1.6.4</version>
+	</dependency>
+	<dependency>
+	  <groupId>sc.fiji</groupId>
+	  <artifactId>Skeletonize3D_</artifactId>
+	  <version>2.1.1</version>
+	</dependency>
+	</dependencies>
+	<build>
+	    <plugins>
+	    	<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jar-plugin</artifactId>
+	            <version>3.2.2</version>
+	            <configuration>
+	                <archive>
+	                    <manifest>
+	                        <mainClass>com.uga.imagej.LengthAnalysisToolSlowCells_2</mainClass>
+	                    </manifest>
+	                </archive>
+	            </configuration>
+       		 </plugin>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.8.1</version>
+	            <configuration>
+	                <source>11</source>
+	                <target>11</target>
+	            </configuration>
+	        </plugin>
+	        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+	    </plugins>
+	</build>
+</project>
