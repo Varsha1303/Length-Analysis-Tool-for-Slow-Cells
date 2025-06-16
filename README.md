@@ -1,7 +1,4 @@
 
-
-
-
 # Length Analysis Plugin
 
 The Length Analysis plugin is a tool designed for the analysis of the paths traversed by cells in cellular suspension. It provides information such as the distance between end points (displacement), length, and curvature of the path in pixels. This information can be used to determine the motility of cells.
@@ -27,8 +24,18 @@ To use the Length Analysis plugin, follow these steps:
 
 1. Open an image of cells in suspension in Fiji.
 2. Click on the Length Analysis plugin in the Plugins menu
-3. The plugin will calculate the distance, length, and curvature of the paths traversed by the selected cells.
-4. The results can be exported as a CSV file for further analysis.
+3. Users can adjust the magnification factor and exposure time based on their requirements.
+4. The plugin will calculate the distance, length, and curvature of the paths traversed by the selected cells.
+5. The results can be exported as a CSV file for further analysis.
+
+## Aknowledgements
+
+This project builds upon the original work by Abha on cilia and flagella length analysis. The initial version of the tool is available at:
+Original GitHub Repository: https://github.com/Abha99/Length-Analysis-Tool
+📄 Reference publication:
+Das, A. et al. (2024). A microfluidic platform for real-time ciliary beat analysis and length measurement in live cells. PubMed Link
+
+I have updated and extended the project with additional functionality and modifications tailored to current requirements, while preserving the foundation laid by Abha's work.
 
 ## Contributing
 
