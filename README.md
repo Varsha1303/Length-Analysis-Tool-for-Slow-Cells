@@ -32,8 +32,9 @@ To use the Length Analysis plugin, follow these steps:
 
 This project builds upon the original work by Abha on cilia and flagella length analysis. The initial version of the tool is available at:
 Original GitHub Repository: https://github.com/Abha99/Length-Analysis-Tool
-📄 Reference publication:
-Das, A. et al. (2024). A microfluidic platform for real-time ciliary beat analysis and length measurement in live cells. PubMed Link
+
+📄 Reference publication:  https://pubmed.ncbi.nlm.nih.gov/38063216/
+Das, A. et al. (2024). A microfluidic platform for real-time ciliary beat analysis and length measurement in live cells.
 
 I have updated and extended the project with additional functionality and modifications tailored to current requirements, while preserving the foundation laid by Abha's work.
 
